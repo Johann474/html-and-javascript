@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greatest Number Finder</title>
+<style>
+body { font-family: Arial; text-align: center; margin-top: 50px; }
+input { padding: 8px; width: 60%; margin: 5px; }
+button { padding: 8px 16px; background: #2ecc71; color: white; border: none; border-radius: 5px; }
+#result { margin-top: 15px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Greatest Number Finder</h1>
+<p>Johann O. Gultiano</p>
+
+<input type="number" id="num1" placeholder="First number"><br>
+<input type="number" id="num2" placeholder="Second number"><br>
+<input type="number" id="num3" placeholder="Third number"><br>
+
+<button onclick="findGreatest()">Find Greatest</button>
+
+<p id="result"></p>
+
+<script>
+function findGreatest() {
+  let a = document.getElementById("num1").value;
+  let b = document.getElementById("num2").value;
+  let c = document.getElementById("num3").value;
+
+  let greatest = Math.max(a, b, c);
+  document.getElementById("result").innerText = "Greatest number is " + greatest;
+}
+</script>
+
+</body>
+</html>
